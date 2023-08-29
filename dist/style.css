@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 50px;
 }
 
@@ -54,39 +55,70 @@ header {
 
 .main {
   display: flex;
-  /* justify-content: space-around; */
   background-color: rgba(249, 249, 249, 0.5);
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
-  height: 98px;
+  min-height: 98px;
   padding-top: 15px;
   padding-right: 120PX;
 }
+@media (max-width: 991px) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+  }
+}
+.main #left-menu {
+  display: none;
+}
+@media (max-width: 991px) {
+  .main #left-menu {
+    display: block;
+    width: 40px;
+    align-self: center;
+  }
+}
 .main .logo img {
-  width: 95px;
+  max-width: 90px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 991px) {
+  .main .logo img {
+    align-self: flex-end;
+  }
 }
 .main nav {
   margin-left: 97px;
 }
-.main ul {
+.main nav ul {
   display: flex;
   -moz-column-gap: 85px;
        column-gap: 85px;
 }
-.main ul li {
+.main nav ul li {
   list-style-type: none;
   color: rgb(6, 86, 12);
   font-size: 20px;
   font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .main nav ul li {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .main nav {
+    display: none;
+  }
 }
 .main .button {
   display: flex;
   gap: 19px;
   align-items: center;
   height: 50px;
-  width: 170px;
+  max-width: 170px;
   justify-content: center;
   margin-top: 10px;
   border: 2px solid rgb(6, 86, 12);
@@ -96,8 +128,13 @@ header {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
+@media (max-width: 991px) {
+  .main .button {
+    display: none;
+  }
+}
 .main .button img {
-  width: 35px;
+  max-width: 35px;
 }
 .main .button p {
   color: rgb(6, 86, 12);
@@ -108,9 +145,22 @@ header {
 .content {
   position: relative;
 }
-.content img {
+.content .background img {
   width: -webkit-fill-available;
   position: relative;
+}
+.content .background.mobile-bg {
+  display: none;
+}
+@media (max-width: 991px) {
+  .content .background.desktop-bg {
+    display: none;
+  }
+  .content .background.mobile-bg {
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 .content .titles {
   position: absolute;
@@ -126,6 +176,19 @@ header {
 .content .titles h2 {
   color: rgb(213, 115, 4);
   margin-top: -50;
+}
+@media (max-width: 991px) {
+  .content .titles h2 {
+    margin-top: -25;
+  }
+}
+@media (max-width: 991px) {
+  .content .titles {
+    font-size: 18px;
+    word-wrap: break-word;
+    text-align: center;
+    width: 60%;
+  }
 }
 .content .costs {
   display: flex;
@@ -146,12 +209,24 @@ header {
   font-size: 30px;
   font-weight: 900px;
 }
+@media (max-width: 991px) {
+  .content .costs {
+    top: 26%;
+    right: 32%;
+  }
+}
 .content .deliverypayment {
   position: absolute;
   top: 67%;
   right: 130px;
   font-weight: 800;
   color: rgb(6, 86, 12);
+}
+@media (max-width: 991px) {
+  .content .deliverypayment {
+    top: 28%;
+    right: 38%;
+  }
 }
 .content .stars {
   display: flex;
@@ -163,6 +238,12 @@ header {
   width: 30px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 991px) {
+  .content .stars {
+    top: 33%;
+    right: 36%;
+  }
 }
 .content input {
   width: 155px;
@@ -176,17 +257,25 @@ header {
   position: absolute;
   top: 85%;
 }
+@media (max-width: 991px) {
+  .content input {
+    top: 38%;
+    right: 36%;
+  }
+}
 
 .vedio {
-  margin-right: 30%;
   position: relative;
+  display: grid;
+  justify-content: center;
 }
 .vedio .vedio-heading {
   display: flex;
   position: absolute;
+  width: auto;
   z-index: 1;
-  top: 96px;
-  left: 48%;
+  top: 25%;
+  left: 32%;
   gap: 23px;
 }
 .vedio .vedio-heading p {
@@ -232,14 +321,35 @@ header {
   padding: 5 200;
   text-align: start;
 }
+@media (max-width: 991px) {
+  .table .line-g {
+    display: grid;
+    gap: 0;
+    word-wrap: break-word;
+    padding: 5px;
+  }
+}
 .table .line {
   display: flex;
   padding: 5px 203;
   gap: 248px;
   text-align: start;
 }
+@media (max-width: 991px) {
+  .table .line {
+    display: grid;
+    gap: 0;
+    word-wrap: break-word;
+    padding: 5px;
+  }
+}
 .table h3 {
   color: rgb(6, 86, 12);
+}
+@media (max-width: 991px) {
+  .table h3 {
+    display: none;
+  }
 }
 .table div {
   color: white;
@@ -261,14 +371,21 @@ header {
 .grid h2 {
   color: rgb(87, 141, 100);
   text-align: start;
-  width: 341px;
+  max-width: 341px;
   word-wrap: break-word;
   font-size: 21px;
 }
 .grid img {
-  width: 350px;
+  max-width: 350px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: auto;
+    align-content: center;
+    padding-right: 0;
+  }
 }
 
 .list ul {
@@ -278,7 +395,7 @@ header {
 .list ul li {
   color: black;
   font-size: 16px;
-  width: 279px;
+  max-width: 279px;
   word-wrap: break-word;
   font-weight: 600;
   list-style-type: none;
@@ -294,14 +411,19 @@ header {
 .openions {
   display: flex;
   background-color: rgb(248, 248, 248);
-  height: 300px;
+  min-height: 300px;
   align-items: center;
   justify-content: space-evenly;
+}
+@media (max-width: 991px) {
+  .openions {
+    display: none;
+  }
 }
 .openions h2 {
   color: rgb(213, 115, 4);
   font-size: 36px;
-  width: 329px;
+  max-width: 329px;
   word-wrap: break-word;
   padding-right: 178px;
 }
@@ -309,7 +431,7 @@ header {
   background-color: white;
   padding: 18px;
   border-radius: 17px;
-  height: 200;
+  min-height: 100;
   box-shadow: -1px 1px 26px 3px rgb(211, 210, 210);
 }
 .openions .review h4 {
@@ -317,7 +439,7 @@ header {
 }
 .openions .review p {
   margin-top: -15px;
-  width: 272px;
+  max-width: 272px;
   word-wrap: break-word;
 }
 .openions .review .customer {
@@ -331,7 +453,7 @@ header {
      object-fit: contain;
 }
 .openions .review .customer .name img {
-  height: 20px;
+  min-height: 20px;
   padding: -4px;
   padding-right: -16px;
   margin-right: -15px;
@@ -348,7 +470,6 @@ header {
 
 .discounts {
   background-color: rgb(87, 141, 100);
-  height: 550px;
   position: relative;
   padding: 27px 117px;
 }
@@ -361,6 +482,12 @@ header {
 .discounts .bottls {
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 991px) {
+  .discounts .bottls {
+    display: grid;
+    gap: 10px;
+  }
 }
 .discounts .bottls .bottl {
   border-radius: 15px;
@@ -419,12 +546,17 @@ header {
   font-weight: bold;
   font-size: 20px;
   width: 158px;
-  height: 60px;
+  min-height: 60px;
   border: none;
   border-radius: 19px;
-  position: absolute;
-  top: 85%;
-  right: 43%;
+  margin-top: 40px;
+  margin-right: 40%;
+}
+@media (max-width: 991px) {
+  .discounts {
+    display: grid;
+    gap: 10px;
+  }
 }
 
 .personal-information {
@@ -436,11 +568,32 @@ header {
   font-size: 39px;
   text-align: center;
 }
+@media (max-width: 991px) {
+  .personal-information h1 {
+    font-size: 27px;
+    font-weight: 900;
+    word-wrap: initial;
+    word-break: break-word;
+    max-width: 46%;
+    text-align: center;
+    margin-right: 175px;
+  }
+}
 .personal-information h3 {
   color: rgb(6, 86, 12);
   font-size: 26px;
   margin-top: -30px;
   text-align: center;
+}
+@media (max-width: 991px) {
+  .personal-information h3 {
+    font-size: 22px;
+    font-weight: 500;
+    word-break: break-word;
+    width: 49%;
+    text-align: center;
+    margin-right: 168px;
+  }
 }
 .personal-information img {
   position: absolute;
@@ -464,9 +617,10 @@ header {
   margin-right: 122px;
   padding-top: 20px;
 }
-.personal-information .information input, .personal-information .information select {
+.personal-information .information input,
+.personal-information .information select {
   width: 350px;
-  height: 50px;
+  min-height: 50px;
   background-color: rgb(245, 255, 247);
   border: 2px solid rgb(151, 184, 153);
   border-radius: 5px;
@@ -480,7 +634,8 @@ header {
 .personal-information .information input input::-moz-placeholder, .personal-information .information select input::-moz-placeholder {
   color: rgb(87, 141, 100);
 }
-.personal-information .information input input::placeholder, .personal-information .information select input::placeholder {
+.personal-information .information input input::placeholder,
+.personal-information .information select input::placeholder {
   color: rgb(87, 141, 100);
 }
 .personal-information .information button {
@@ -489,7 +644,7 @@ header {
   font-weight: bold;
   font-size: 20px;
   width: 158px;
-  height: 60px;
+  min-height: 60px;
   border: none;
   border-radius: 19px;
   margin-top: 20px;
@@ -499,21 +654,33 @@ header {
 
 .question {
   background-color: rgb(124, 178, 137);
-  height: 1050px;
 }
 .question .qs {
   margin-right: 100px;
+  display: grid;
+  justify-content: center;
 }
 .question .qs div {
   background-color: rgb(87, 141, 100);
   color: white;
-  width: 900px;
-  margin: 50px;
+  max-width: 900px;
+  margin: 18px;
+  margin-right: 0;
   padding: 15px 50px;
   border-radius: 12px;
 }
+@media (max-width: 991px) {
+  .question .qs div {
+    width: auto;
+  }
+}
 .question .qs .textarea {
-  height: 300px;
+  min-height: 300px;
+}
+@media (max-width: 991px) {
+  .question .qs .textarea {
+    height: auto;
+  }
 }
 .question h1 {
   color: white;
@@ -544,9 +711,23 @@ footer .flex :first-child::after {
   position: absolute;
   background-color: rgb(87, 141, 100);
   width: 5px;
-  height: 30;
+  min-height: 30;
   margin-top: 11px;
   right: 48%;
+}
+@media (max-width: 991px) {
+  footer .flex :first-child::after {
+    width: 30px;
+    min-height: 5px;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 991px) {
+  footer .flex {
+    display: grid;
+    gap: 15px;
+    font-size: 20px;
+  }
 }
 footer p {
   color: rgb(87, 141, 100);
