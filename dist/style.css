@@ -66,7 +66,7 @@ header {
   .main {
     display: flex;
     justify-content: space-between;
-    padding-left: 50px;
+    padding-left: 1rem;
   }
 }
 .main #left-menu {
@@ -120,6 +120,7 @@ header {
   height: 50px;
   max-width: 170px;
   justify-content: center;
+  padding: 10px;
   margin-top: 10px;
   border: 2px solid rgb(6, 86, 12);
   border-radius: 15px;
@@ -128,18 +129,29 @@ header {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-@media (max-width: 991px) {
-  .main .button {
-    display: none;
-  }
-}
 .main .button img {
   max-width: 35px;
+}
+@media (max-width: 1200px) {
+  .main .button img {
+    max-width: 25px;
+  }
 }
 .main .button p {
   color: rgb(6, 86, 12);
   font-weight: bold;
   font-size: 18px;
+}
+@media (max-width: 1200px) {
+  .main .button p {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .main .button {
+    display: none;
+  }
 }
 
 .content {
@@ -162,90 +174,46 @@ header {
        object-fit: contain;
   }
 }
-.content .titles {
+.content .grid-system {
+  display: grid;
+  grid-template-columns: 328px;
+  grid-template-rows: 16rem 3rem 3rem 2rem 4rem;
+  align-items: center;
   position: absolute;
-  top: 8%;
-  right: 130px;
-  width: 350px;
-  font-size: 23px;
-  word-wrap: break-word;
+  top: -2%;
+  padding: 69px;
+  font-size: 22px;
+  padding-right: 10%;
 }
-.content .titles h1 {
+.content .grid-system h1 {
   color: rgb(6, 86, 12);
 }
-.content .titles h2 {
+.content .grid-system h2 {
   color: rgb(213, 115, 4);
-  margin-top: -50;
 }
-@media (max-width: 991px) {
-  .content .titles h2 {
-    margin-top: -25;
-  }
-}
-@media (max-width: 991px) {
-  .content .titles {
-    font-size: 18px;
-    word-wrap: break-word;
-    text-align: center;
-    width: 60%;
-  }
-}
-.content .costs {
+.content .grid-system .costs {
   display: flex;
-  gap: 10px;
-  color: rgb(6, 86, 12);
-  position: absolute;
-  right: 130px;
-  top: 64%;
   font-weight: bold;
+  color: rgb(6, 86, 12);
+  font-size: 18px;
 }
-.content .costs :first-child {
-  margin-top: -15px;
-}
-.content .costs :last-child {
+.content .grid-system .costs :last-child {
   margin-top: 5px;
 }
-.content .costs b {
-  font-size: 30px;
-  font-weight: 900px;
-}
-@media (max-width: 991px) {
-  .content .costs {
-    top: 26%;
-    right: 32%;
-  }
-}
-.content .deliverypayment {
-  position: absolute;
-  top: 67%;
-  right: 130px;
+.content .grid-system .deliverypayment {
   font-weight: 800;
   color: rgb(6, 86, 12);
+  font-size: 18px;
 }
-@media (max-width: 991px) {
-  .content .deliverypayment {
-    top: 28%;
-    right: 38%;
-  }
-}
-.content .stars {
+.content .grid-system .stars {
   display: flex;
-  position: absolute;
-  right: 130px;
-  top: 75%;
 }
-.content .stars img {
+.content .grid-system .stars img {
   width: 30px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media (max-width: 991px) {
-  .content .stars {
-    top: 33%;
-    right: 36%;
-  }
-}
-.content input {
+.content .grid-system input {
   width: 155px;
   background-color: rgb(6, 86, 12);
   color: white;
@@ -253,18 +221,64 @@ header {
   font-size: 24px;
   border-radius: 16px;
   border: none;
-  right: 130px;
-  position: absolute;
-  top: 85%;
+}
+@media (max-width: 1200px) {
+  .content .grid-system input {
+    font-size: 18px;
+  }
 }
 @media (max-width: 991px) {
-  .content input {
-    top: 38%;
-    right: 36%;
+  .content .grid-system input {
+    width: 300px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 1399px) {
+  .content .grid-system {
+    font-size: 20px;
+    grid-template-rows: 14rem 3rem 3rem 2rem 3rem;
+  }
+}
+@media (max-width: 1199px) {
+  .content .grid-system {
+    font-size: 17px;
+    grid-template-rows: 12rem 3rem 3rem 2rem 2rem;
+  }
+}
+@media (max-width: 1130px) {
+  .content .grid-system {
+    font-size: 16px;
+    grid-template-rows: 10rem 3rem 3rem 2rem 2rem;
+  }
+}
+@media (max-width: 991px) {
+  .content .grid-system {
+    font-size: 20px;
+    grid-template-rows: 14rem 3rem 3rem 2rem 3rem;
+    font-size: 20px;
+    grid-template-rows: 9rem 3rem 3rem 2rem 3rem;
+    grid-template-columns: 419px;
+    justify-items: center;
+    right: 8%;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .content .grid-system {
+    right: 0;
+  }
+}
+@media (max-width: 680px) {
+  .content .grid-system {
+    right: 0;
+    font-size: 16px;
+    padding-right: 0;
   }
 }
 
 .vedio {
+  text-align: center;
   position: relative;
   display: grid;
   justify-content: center;
@@ -299,7 +313,6 @@ header {
   padding-top: 14px;
 }
 .vedio h1 {
-  margin-right: 15%;
   color: rgb(213, 115, 4);
 }
 
@@ -332,7 +345,7 @@ header {
 .table .line {
   display: flex;
   padding: 5px 203;
-  gap: 248px;
+  gap: 300px;
   text-align: start;
 }
 @media (max-width: 991px) {
@@ -379,6 +392,12 @@ header {
   max-width: 350px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 1399px) {
+  .grid {
+    grid-template-columns: 50% 50%;
+    padding-right: 5%;
+  }
 }
 @media (max-width: 991px) {
   .grid {
@@ -483,12 +502,6 @@ header {
   display: flex;
   justify-content: space-around;
 }
-@media (max-width: 991px) {
-  .discounts .bottls {
-    display: grid;
-    gap: 10px;
-  }
-}
 .discounts .bottls .bottl {
   border-radius: 15px;
   background-color: white;
@@ -528,6 +541,17 @@ header {
   font-size: 20px;
   margin-top: -27px;
   margin-right: 73px;
+}
+@media (max-width: 1399px), (max-width: 1199px) {
+  .discounts .bottls {
+    gap: 5%;
+  }
+}
+@media (max-width: 991px) {
+  .discounts .bottls {
+    display: grid;
+    gap: 10px;
+  }
 }
 .discounts #text {
   margin-top: -15px;
@@ -631,12 +655,15 @@ header {
   margin-right: 118px;
   cursor: pointer;
 }
-.personal-information .information input input::-moz-placeholder, .personal-information .information select input::-moz-placeholder {
-  color: rgb(87, 141, 100);
+.personal-information .information input::-moz-placeholder {
+  color: rgb(184, 183, 183);
+  font-weight: bold;
+  font-size: 18px;
 }
-.personal-information .information input input::placeholder,
-.personal-information .information select input::placeholder {
-  color: rgb(87, 141, 100);
+.personal-information .information input::placeholder {
+  color: rgb(184, 183, 183);
+  font-weight: bold;
+  font-size: 18px;
 }
 .personal-information .information button {
   background-color: rgb(6, 86, 12);
@@ -656,16 +683,14 @@ header {
   background-color: rgb(124, 178, 137);
 }
 .question .qs {
-  margin-right: 100px;
   display: grid;
   justify-content: center;
 }
 .question .qs div {
   background-color: rgb(87, 141, 100);
   color: white;
-  max-width: 900px;
+  width: 100%;
   margin: 18px;
-  margin-right: 0;
   padding: 15px 50px;
   border-radius: 12px;
 }
