@@ -59,13 +59,15 @@ header {
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
   min-height: 98px;
-  padding-top: 15px;
   justify-content: center;
+  align-items: center;
+  gap: 5%;
 }
 @media (max-width: 991px) {
   .main {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 2rem;
   }
 }
 .main #left-menu {
@@ -81,9 +83,6 @@ header {
   max-width: 90px;
   -o-object-fit: contain;
      object-fit: contain;
-}
-.main nav {
-  margin-left: 97px;
 }
 .main nav ul {
   display: flex;
@@ -111,7 +110,6 @@ header {
   gap: 19px;
   align-items: center;
   height: 50px;
-  max-width: 170px;
   justify-content: center;
   padding: 10px;
   margin-top: 10px;
@@ -165,6 +163,7 @@ header {
     display: block;
     -o-object-fit: contain;
        object-fit: contain;
+    width: 100%;
   }
 }
 .content .grid-system {
@@ -173,10 +172,14 @@ header {
   grid-template-rows: 16rem 3rem 3rem 2rem 4rem;
   align-items: center;
   position: absolute;
-  top: -2%;
-  padding: 69px;
+  top: -30%;
   font-size: 22px;
-  padding-right: 15%;
+  right: 30%;
+  transform: translate(50%, 50%);
+  -webkit-transform: translate(50%, 50%);
+  -moz-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  -o-transform: translate(50%, 50%);
 }
 .content .grid-system h1 {
   color: rgb(6, 86, 12);
@@ -220,20 +223,6 @@ header {
     font-size: 18px;
   }
 }
-@media (max-width: 991px) {
-  .content .grid-system input {
-    width: 300px;
-    height: 50px;
-    font-size: 24px;
-  }
-}
-@media (max-width: 420px) {
-  .content .grid-system input {
-    width: 250px;
-    height: 40px;
-    font-size: 18px;
-  }
-}
 @media (max-width: 1399px) {
   .content .grid-system {
     font-size: 20px;
@@ -244,62 +233,41 @@ header {
   .content .grid-system {
     font-size: 17px;
     grid-template-rows: 12rem 3rem 3rem 2rem 2rem;
-    padding-right: 10%;
-  }
-}
-@media (max-width: 1130px) {
-  .content .grid-system {
-    font-size: 16px;
-    grid-template-rows: 10rem 3rem 3rem 2rem 2rem;
   }
 }
 @media (max-width: 991px) {
   .content .grid-system {
     font-size: 20px;
-    grid-template-rows: 14rem 3rem 3rem 2rem 3rem;
-    font-size: 20px;
     grid-template-rows: 9rem 3rem 3rem 2rem 3rem;
     grid-template-columns: 419px;
     justify-items: center;
-    right: 8%;
     text-align: center;
-    top: 5%;
-  }
-}
-@media (max-width: 767px) {
-  .content .grid-system {
-    right: 0;
-  }
-}
-@media (max-width: 575px) {
-  .content .grid-system {
-    font-size: 18px;
+    top: -5%;
+    right: 47%;
+    transform: translate(50%, 50%);
   }
 }
 @media (max-width: 480px) {
   .content .grid-system {
     grid-template-rows: 8rem 3rem 3rem 2rem 2rem;
     font-size: 16px;
-    width: 100%;
+    transform: translate(50%, 50%);
+    right: 45%;
+    top: -11%;
   }
 }
 @media (max-width: 420px) {
   .content .grid-system {
     grid-template-rows: 7rem 2rem 3rem 2rem 2rem;
     font-size: 16px;
-    padding-right: 0;
-    top: 0;
-    width: 100%;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 350px) {
   .content .grid-system {
-    grid-template-rows: 5rem 2rem 3rem 2rem 2rem;
+    grid-template-rows: 4rem 2rem 3rem 2rem 2rem;
     grid-template-columns: 249px;
-    font-size: 11px;
-    right: 17%;
-    top: 0;
-    width: 100%;
+    font-size: 10px;
+    top: -18%;
   }
 }
 
@@ -316,57 +284,6 @@ header {
 @media (max-width: 500px) {
   .vedio #my-vedio {
     width: 100%;
-  }
-}
-.vedio .vedio-heading {
-  display: flex;
-  position: absolute;
-  width: auto;
-  justify-content: space-between;
-  z-index: 1;
-  top: 25%;
-  left: 32%;
-  gap: 23px;
-}
-.vedio .vedio-heading p {
-  font-size: 29px;
-  color: white;
-  margin-top: 15px;
-}
-@media (max-width: 500px) {
-  .vedio .vedio-heading p {
-    font-size: 20px;
-  }
-}
-.vedio .vedio-heading .symbol {
-  background-color: rgb(255, 255, 255);
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  width: 85px;
-  height: 85px;
-}
-@media (max-width: 500px) {
-  .vedio .vedio-heading .symbol {
-    width: 60px;
-    height: 60px;
-  }
-}
-.vedio .vedio-heading .symbol img {
-  width: 83px;
-  padding-left: -32px;
-  padding-top: 14px;
-}
-@media (max-width: 500px) {
-  .vedio .vedio-heading .symbol img {
-    width: 60px;
-  }
-}
-@media (max-width: 500px) {
-  .vedio .vedio-heading {
-    left: 30;
   }
 }
 .vedio h1 {
@@ -436,7 +353,6 @@ header {
   grid-template-columns: 41% 41%;
   justify-items: center;
   position: relative;
-  padding-right: 18%;
 }
 .grid h2 {
   color: rgb(87, 141, 100);
@@ -455,17 +371,9 @@ header {
     width: 100%;
   }
 }
-@media (max-width: 1399px) {
-  .grid {
-    grid-template-columns: 50% 50%;
-    padding-right: 5%;
-  }
-}
 @media (max-width: 991px) {
   .grid {
     grid-template-columns: auto;
-    align-content: center;
-    padding-right: 0;
   }
 }
 
@@ -552,22 +460,8 @@ header {
 .discounts {
   background-color: rgb(87, 141, 100);
   position: relative;
-  padding: 27px 117px;
-}
-@media (max-width: 480px) {
-  .discounts {
-    padding-right: 18%;
-  }
-}
-@media (max-width: 420px) {
-  .discounts {
-    padding-right: 15%;
-  }
-}
-@media (max-width: 380px) {
-  .discounts {
-    padding-right: 10%;
-  }
+  margin-top: -23px;
+  height: auto;
 }
 .discounts h1 {
   padding-top: 10px;
@@ -577,7 +471,8 @@ header {
 }
 .discounts .bottls {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 5%;
 }
 .discounts .bottls .bottl {
   border-radius: 15px;
@@ -587,7 +482,7 @@ header {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-  width: 286px;
+  width: auto;
 }
 .discounts .bottls .bottl label {
   position: absolute;
@@ -619,11 +514,6 @@ header {
   margin-top: -27px;
   margin-right: 73px;
 }
-@media (max-width: 1399px), (max-width: 1199px) {
-  .discounts .bottls {
-    gap: 5%;
-  }
-}
 @media (max-width: 991px) {
   .discounts .bottls {
     display: grid;
@@ -650,17 +540,21 @@ header {
   min-height: 60px;
   border: none;
   border-radius: 19px;
-  margin-top: 40px;
-  margin-right: 40%;
+  margin: 4% 43%;
 }
 @media (max-width: 991px) {
   .discounts button {
-    margin-right: 33%;
+    margin-right: 38%;
   }
 }
 @media (max-width: 750px) {
   .discounts button {
-    margin-right: 23%;
+    margin-right: 33%;
+  }
+}
+@media (max-width: 400px) {
+  .discounts button {
+    margin-right: 29%;
   }
 }
 @media (max-width: 991px) {

@@ -56,12 +56,15 @@ header {
     background-color: rgb(249, 249, 249, 0.5);
     backdrop-filter: blur(30px);
     min-height: 98px;
-    padding-top: 15px;
    justify-content: center;
+   align-items: center;
+   gap: 5%;
+
     @media (max-width: 991px){
         display:flex ;
-        justify-content: space-around;
-       
+        justify-content: space-between;
+        padding: 0 2rem;
+
     }
 
    #left-menu {
@@ -81,8 +84,7 @@ header {
     }
 
     nav {
-        margin-left: 97px;
-
+        
         ul {
             display: flex;
             column-gap: 85px;
@@ -110,7 +112,6 @@ header {
         gap: 19px;
         align-items: center;
         height: 50px;
-        max-width: 170px;
         justify-content: center;
         padding: 10px;
         margin-top: 10px;
@@ -120,8 +121,7 @@ header {
         -moz-border-radius: 15px;
         -ms-border-radius: 15px;
         -o-border-radius: 15px;
-        
-       
+ 
 
         img {
             max-width: 35px;
@@ -165,6 +165,7 @@ header {
             &.mobile-bg {
                 display: block;
                 object-fit: contain;
+                width: 100%;
             }
         }
     }
@@ -174,10 +175,14 @@ header {
         grid-template-rows: 16rem 3rem 3rem 2rem 4rem;
         align-items: center;
         position: absolute;
-        top: -2%;
-        padding: 69px;
+        top: -30%;
         font-size: 22px;
-        padding-right: 15%;
+        right: 30%;
+        transform: translate(50%,50%);
+        -webkit-transform: translate(50%,50%);
+        -moz-transform: translate(50%,50%);
+        -ms-transform: translate(50%,50%);
+        -o-transform: translate(50%,50%);
         h1{
             color: $green; 
         }
@@ -206,7 +211,7 @@ header {
             }
                 }
         input {
-             width: 155px;
+            width: 155px;
             background-color: $green;
             color: white;
             font-weight: bold;
@@ -217,17 +222,6 @@ header {
                         font-size: 18px;
 
                     }
-                    @media (max-width:991px){
-                        width: 300px;
-                        height: 50px;
-                        font-size: 24px;
-                    }
-                    @media (max-width:420px){
-                        width: 250px;
-                        height: 40px;
-                        font-size: 18px;
-                    }
-
                 }
                 @media (max-width: 1399px){
                     font-size: 20px;
@@ -236,56 +230,39 @@ header {
                 @media (max-width: 1199px){
                     font-size: 17px;
                     grid-template-rows: 12rem 3rem 3rem 2rem 2rem;
-                    padding-right: 10%;
-                    
                 }
-                @media (max-width: 1130px){
-                    font-size: 16px;
-                    grid-template-rows: 10rem 3rem 3rem 2rem 2rem;
-                    
-                }
-                @media (max-width: 991px){
-                    font-size: 20px;
-                    grid-template-rows: 14rem 3rem 3rem 2rem 3rem;
+                
+                @media (max-width:991px){
                     font-size: 20px;
                     grid-template-rows: 9rem 3rem 3rem 2rem 3rem;
                     grid-template-columns: 419px;
                     justify-items: center;
-                    right: 8%;
                     text-align: center;
-                    top: 5%;
-                    
-                }
-                @media (max-width: 767px){
-                    right: 0;
-                }
-                @media (max-width: 575px){
-                    
-                    font-size: 18px;
-                    
+                    top: -5%;
+                    right: 47%;
+                    transform: translate(50%, 50%);
                 }
                 @media (max-width: 480px){
                     grid-template-rows: 8rem 3rem 3rem 2rem 2rem;
                     font-size: 16px;
-                    width: 100%;
+                    transform: translate(50%, 50%);
+                    right: 45%;
+                    top: -11%;
                     
                     
                 }
                 @media (max-width: 420px){
                     grid-template-rows: 7rem 2rem 3rem 2rem 2rem;
                     font-size: 16px;
-                    padding-right: 0;
-                    top: 0;
-                    width: 100%;
-                }
-                @media (max-width: 390px){
-                    grid-template-rows: 5rem 2rem 3rem 2rem 2rem;
+                   
+                }     
+                @media (max-width: 350px){
+                    grid-template-rows: 4rem 2rem 3rem 2rem 2rem;
                     grid-template-columns: 249px;
-                    font-size: 11px;
-                    right: 17%;
-                    top: 0;
-                    width: 100%;
-                }          
+                    font-size: 10px;
+                    top: -18%;
+                   
+                }         
     } 
 }
 .vedio {
@@ -301,66 +278,10 @@ header {
             width:100%;
          }
      }
-    .vedio-heading {
-        display: flex;
-        position: absolute;
-        width: auto;
-        justify-content: space-between;
-        z-index: 1;
-        top: 25%;
-        left: 32%;
-        gap: 23px;
-
-        p {
-            font-size: 29px;
-            color:white;
-            margin-top: 15px;
-            @media (max-width:500px) 
-                {
-                    font-size: 20px;
-                    
-                }
-        }
-
-        .symbol {
-            background-color: rgb(255, 255, 255);
-            border-radius: 50px;
-            -webkit-border-radius: 50px;
-            -moz-border-radius: 50px;
-            -ms-border-radius: 50px;
-            -o-border-radius: 50px;
-             width: 85px;
-             height: 85px;
-             @media (max-width:500px) 
-                {
-                    width: 60px;
-                    height: 60px;
-                    
-                }
-
-            img {
-                width: 83px;
-                padding-left: -32px;
-                padding-top: 14px;
-                @media (max-width:500px) 
-                {
-                    width: 60px;
-                    
-                }
-               }
-               }
-               @media (max-width:500px) 
-                {
-                    left: 30;
-                    
-                }
-                  }
-
                 h1 {
                     
                     color: $orange;
                 }
-    
 }
 
 .table {
@@ -387,7 +308,7 @@ header {
             gap: 0;
             word-wrap: break-word;
             padding: 5px;
-                                 }
+ }
              }
 
     .line {
@@ -430,7 +351,7 @@ header {
     grid-template-columns: 41% 41%;
     justify-items: center;
     position: relative;
-    padding-right: 18%;
+   
     h2 {
         color: $whitegreen;
         text-align: start;
@@ -445,15 +366,10 @@ header {
             width:100%;
         }
     }
-    @media (max-width: 1399px){
-        grid-template-columns: 50% 50%;
-        
-        padding-right: 5%;
-    }
+
     @media(max-width: 991px){
         grid-template-columns: auto;
-        align-content: center;
-        padding-right: 0;
+  
     }
 }
 .list {
@@ -549,18 +465,8 @@ header {
 .discounts {
     background-color: $whitegreen;
     position: relative;
-    padding: 27px 117px;
-    @media(max-width: 480px){
-        padding-right: 18%;
-     }
-     @media(max-width: 420px){
-        padding-right: 15%;
-    }
-    @media(max-width: 380px){
-        padding-right: 10%;
-        
-    }
-
+    margin-top: -23px;
+    height: auto;
 
     h1 {
         padding-top: 10px;
@@ -571,10 +477,8 @@ header {
 
     .bottls {
         display: flex;
-        justify-content: space-around;
-       
-       
-
+        justify-content: center;
+        gap: 5%;
         .bottl {
             border-radius: 15px;
             background-color: white;
@@ -583,7 +487,7 @@ header {
             -moz-border-radius: 15px;
             -ms-border-radius: 15px;
             -o-border-radius: 15px;
-            width: 286px;
+            width:auto;
 
             label {
                 position: absolute;
@@ -603,8 +507,9 @@ header {
             img {
                 width: 202px;
                 margin-top: -33px;
-                margin-right: 48px
-            }
+                margin-right: 48px;
+            
+}
 
             h2 {
                 margin-top: -59px;
@@ -623,12 +528,7 @@ header {
            
         }
       
-        @media (max-width: 1399px) , (max-width: 1199px){
-            gap: 5%;
-            
-            
-        }
-      
+  
         @media(max-width: 991px){
             display: grid;
             gap: 10px;
@@ -659,13 +559,16 @@ header {
         min-height: 60px;
         border: none;
         border-radius: 19px;
-        margin-top: 40px;
-        margin-right: 40%;
+        margin: 4% 43%;
+      
         @media (max-width: 991px){
-            margin-right:33%;
+            margin-right:38%;
         }
         @media (max-width: 750px){
-            margin-right:23%;
+            margin-right:33%;
+        }
+        @media (max-width: 400px){
+            margin-right:29%;
         }
        
        
