@@ -621,11 +621,11 @@ header {
   top: 26%;
   width: 55px;
 }
-.personal-information .information {
+.personal-information form {
   display: grid;
   justify-content: center;
 }
-.personal-information .information label {
+.personal-information form label {
   color: rgb(87, 141, 100);
   font-size: 18px;
   font-weight: bold;
@@ -633,14 +633,14 @@ header {
   padding-top: 20px;
 }
 @media (max-width: 991px) {
-  .personal-information .information label {
+  .personal-information form label {
     text-align: center;
     margin-right: 0;
   }
 }
-.personal-information .information input,
-.personal-information .information select {
-  width: 70%;
+.personal-information form input,
+.personal-information form select {
+  width: 100%;
   min-height: 50px;
   background-color: rgb(245, 255, 247);
   border: 2px solid rgb(151, 184, 153);
@@ -652,17 +652,29 @@ header {
   justify-self: center;
   cursor: pointer;
 }
-.personal-information .information input::-moz-placeholder {
+.personal-information form input::-moz-placeholder {
   color: rgb(184, 183, 183);
   font-weight: bold;
   font-size: 18px;
 }
-.personal-information .information input::placeholder {
+.personal-information form input::placeholder {
   color: rgb(184, 183, 183);
   font-weight: bold;
   font-size: 18px;
 }
-.personal-information .information button {
+.personal-information form .hidden {
+  display: none;
+}
+.personal-information form .required {
+  display: none;
+}
+.personal-information form .number-validation {
+  display: none;
+}
+.personal-information form .number-required {
+  display: none;
+}
+.personal-information form #submit {
   background-color: rgb(6, 86, 12);
   color: white;
   font-weight: bold;
@@ -675,7 +687,7 @@ header {
   justify-self: center;
 }
 @media (max-width: 991px) {
-  .personal-information .information button {
+  .personal-information form #submit {
     width: 64%;
   }
 }

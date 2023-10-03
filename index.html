@@ -265,17 +265,25 @@
                 <div class="information">
                     <h1>استعد قدرتك على الحركة</h1>
                     <h3>مع الداعم الطبيعي لمرونة ومشاكل المفاصل</h3>
-                    <label for="name">الاسم الكامل</label>
-                    <input type="text" placeholder="الاسم">
-                    <label for="telefonnumber">رقم الهاتف</label>
-                    <input type="tel" placeholder="053412345678">
-                    <label for="discount">اختار العرض</label>
-                    <select name="" id="" >
-                        <option value="عبوة واحدة">عبوة واحدة</option>
-                        <option value="عبوتين">عبوتين</option>
-                        <option value="ثلاث عبوات">ثلاث عبوات</option>
-                    </select>
-                    <button>اطلبه الان</button>
+                    <form action="">
+                        <label for="name">الاسم الكامل</label>
+                        <input id="Full-name" type="text" placeholder="الاسم">
+                        <div id="notification" class="hidden">Full name should contain only letters.</div>
+                        <div id="require" class="required">you should fill the name</div>
+                        <label for="telefonnumber">رقم الهاتف</label>
+                        <input id="telephone-number" type="tel" placeholder="053412345678">
+                        <div id="number-validation" class="number-validation">Number should contain only numbers</div>
+                        <div id="number-required" class="number-required">you should fill the number</div>
+                        <label for="discount">اختار العرض</label>
+                        <select name="" id="" >
+                            <option value="عبوة واحدة">عبوة واحدة</option>
+                            <option value="عبوتين">عبوتين</option>
+                            <option value="ثلاث عبوات">ثلاث عبوات</option>
+                        </select>
+                       
+
+                        <input id="submit" type="submit" value="اطلبه الان">
+                </form>
                 </div>
             </div>
             <div class="question">
@@ -310,5 +318,6 @@
 
        </div>
     </div>
+    <script src="/assets/script.js"></script>
 </body>
 </html>

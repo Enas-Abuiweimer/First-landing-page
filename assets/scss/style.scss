@@ -629,7 +629,7 @@ header {
         top: 26%;
         width: 55px;
     }
-    .information {
+    form {
         display: grid;
         justify-content: center;
 
@@ -646,7 +646,7 @@ header {
         }
         input,
         select {
-            width: 70%;
+            width: 100%;
             min-height: 50px;
             background-color: rgb(245, 255, 247);
             border: 2px solid rgb(151, 184, 153);
@@ -656,7 +656,6 @@ header {
             -ms-border-radius: 5px;
             -o-border-radius: 5px;
             justify-self: center;
-                
             cursor: pointer;
             
         }
@@ -665,7 +664,22 @@ header {
             font-weight: bold;
             font-size: 18px;
         }
-        button {
+        .hidden {
+         
+            display: none;
+            
+          }
+          .required{
+            display: none;
+          }
+
+          .number-validation{
+            display:none;
+          }
+          .number-required{
+            display:none;
+          }
+        #submit {
             background-color: rgb(6, 86, 12);
             color: white;
             font-weight: bold;
